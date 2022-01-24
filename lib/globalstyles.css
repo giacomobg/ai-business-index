@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'SalmaAlfasans';
+    src: url("./SalmaAlfasans-Light.otf") format("opentype");
+}
+
+body {
+  font-family: 'SalmaAlfasans';
+}
+
+h1, h3 {
+  font-weight: 400;
+}
+
+.header {
+  margin-top: 17px;
+  margin-left: 5px;
+  font-size: 13px;
+}
+
+.header.right {
+  float: right;
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+  background-color: #eee;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+@media (max-width: 599px) {
+  .desktop {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.border-container {
+  position:relative;
+}
+
+.border-container.title:before {
+  border-color: #ccc;
+  top: 26px;
+  height: 24px;
+}
+
+.border-container:before {
+    position: absolute;
+    width: 00px;
+    height: calc(100% - 36px);
+    border-color: #eee;
+    /* border-color: #e8e7ba; */
+    border-style: solid;
+    /* border-width: 2px; */
+    content: ' ';
+    top: 10px;
+    left: 1px;
+    border-width: 3px 0 0 3px;
+}

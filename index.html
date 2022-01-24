@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>AI country score</title>
+  <meta name='viewport' content='initial-scale=1' />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,bold" rel="stylesheet">
+  <link href="./lib/globalstyles.css" rel="stylesheet" />
+
+<style>
+
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .small-label {
+    font-size: 13px;
+  }
+
+  body {
+    max-width: 800px;
+  }
+
+  #container {
+    margin-top: 35px;
+    width: 100%;
+    max-width: 800px;
+    height: 320px;
+    overflow-y: scroll;
+  }
+
+  svg {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+    overflow-y: scroll;
+  }
+
+  #squares {
+    height: 18px;
+  }
+
+  text {
+    text-anchor: middle;
+    alignment-baseline: middle;
+  }
+
+  .name {
+    background-color: white;
+  }
+
+  .score-rect {
+    transform-box: fill-box;
+    stroke: white;
+  }
+
+  .Deals-rect {
+    transform: rotate(45deg);
+  }
+  .Filings-rect {
+    transform: rotate(135deg);
+  }
+  .Jobs-rect {
+    transform: rotate(225deg);
+  }
+  .Patents-rect {
+    transform: rotate(315deg);
+  }
+
+  .number-line {
+    stroke: #cacaca;
+  }
+
+  @media (max-width: 599px) {
+    .link-rect {
+      height: 110px;
+    }
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+  }
+  input[type=radio] {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+  }
+  .radio-button {
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+  label {
+    font-weight: 900;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+  input[type=radio] + label {
+    border-bottom: solid;
+  }
+  input[type=radio]:checked + label {
+    border: solid;
+  }
+
+  #jobs {
+    color: #dbae44;
+  }
+  #filings {
+    color: #bb7af0;
+  }
+  #deals {
+    color: #f05d65;
+  }
+  #patents {
+    color: #007e8a;
+  }
+
+  #rank-intro {
+    margin-right: 15px;
+  }
+
+</style>
+
+<!-- <script src="https://cdn.ons.gov.uk/vendor/d3/4.2.7/d3.min.js"></script> -->
+<script src="lib/d3.min.js"></script>
+
+<body>
+  <p class="title">The USA is the country with the most AI related business</p>
+  <p class="subtitle">
+    Our composite index considers <strong>four different measures</strong> of business activity
+    in the AI industry.
+    These are shown as <img id="squares" src="squares.png"> four squares that are sized according to
+    how each country scores.
+  </p>
+  <p class="subtitle" style="display:inline-block;">
+    <span id="rank-intro">Rank the list by:</span>
+    <fieldset style="display:inline-block;">
+      <div class="radio-button">
+        <input id="total-input" type="radio" value="Score" name="ranker">
+        <label for="total-input">Overall score</label>
+      </div>
+      <div class="radio-button" id="jobs">
+        <input id="jobs-input" type="radio" value="Jobs" name="ranker">
+        <label for="jobs-input">Jobs</label>
+      </div>
+      <div class="radio-button" id="patents">
+        <input id="patents-input" type="radio" value="Patents" name="ranker">
+        <label for="patents-input">Patents</label>
+      </div>
+      <div class="radio-button" id="deals">
+        <input id="deals-input" type="radio" value="Deals" name="ranker">
+        <label for="deals-input">Deals (e.g. mergers, acquisitions)</label>
+      </div>
+      <div class="radio-button" id="filings">
+        <input id="filings-input" type="radio" value="Filings" name="ranker">
+        <label for="filings-input">Filings</label>
+      </div>
+    </fieldset>
+
+  <div id="container">
+    <svg id="graphic">
+    </svg>
+  </div>
+</body>
+
+<script>
+
+console.log(d3.select("#container").style("width"));
+  var onDesktop = parseInt(d3.select("#container").style("width")) > 450 ? true : false;
+  var rowHeight = onDesktop ? 30 : 60;
+  if (onDesktop) {
+    var margin = {
+      top: 15,
+      right: 50,
+      bottom: 10,
+      left: 204
+    }
+  } else {
+    var margin = {
+      top: 5,
+      right: 60,
+      bottom: 40,
+      left: 10
+    }
+  }
+  var variable = null;
+
+  d3.csv('data-1.csv', function(error, data) {
+    graphic_data = data;
+    drawGraphic();
+  })
+
+  function drawGraphic() {
+
+    d3.select("#total-input").property("checked", true);
+
+    console.log(graphic_data);
+    var svg = d3.select("#graphic");
+    var width = parseInt(svg.style("width"));
+    var height = rowHeight * graphic_data.length+margin.top+margin.bottom;
+    // set graphic height
+    svg.style("height", height + "px");
+
+    var chart = svg.append("g")
+      .attr("id", "chart")
+
+    var rows = chart.selectAll("g")
+      .data(graphic_data)
+      .enter()
+      .append("g")
+      .attr("class", "row")
+      .attr("transform", function(d,i) {
+        return "translate(" + (onDesktop ? 0 : 10) + "," + (margin.top + (i+1)*rowHeight) + ")"
+      } )
+
+    // add ranking number
+    rows.append("text")
+      .attr("class", "ranking")
+      .text(function(d,i) {
+        return d.ScoreRank
+      })
+      .attr("x", 12)
+      .style("font-weight", 800)
+
+    // add country name
+    rows.append("text")
+      .attr("class", "name")
+      .text(function(d,i) {
+        return d.Country
+      })
+      .attr("x", 30)
+      .style("text-anchor", "start")
+
+    // create data driven chart
+
+    // make scale
+    var xTotal = d3.scaleLinear()
+      .domain([1,10])
+      .range([0, width-margin.left-margin.right])
+
+    // add chart item
+    var chartItem = rows.append("g")
+      .attr("transform", "translate(" + margin.left + "," + (onDesktop ? -5 : 15) + ")");
+    chartItem.append("line")
+      .attr("class", "number-line")
+      .attr("x1", xTotal.range()[0])
+      .attr("y1", 0)
+      .attr("x2", xTotal.range()[1])
+      .attr("y2", 0);
+
+    var scoresData = [
+      {
+        key: "Deals",
+        colour: "#f05d65"
+      },
+      {
+        key: "Filings",
+        colour: "#bb7af0"
+      },
+      {
+        key: "Jobs",
+        colour: "#dbae44"
+      },
+      {
+        key: "Patents",
+        colour: "#007e8a"
+      },
+    ]
+
+    // add marker for each score
+    scoresData.forEach((entry, i) => {
+      // add marker
+      chartItem.append("rect")
+        .attr("class", "score-rect " + entry.key + "-rect")
+        .attr("x", function(d) { return xTotal(d.Score) } )
+        .attr("y", 0)
+        .attr("width", function(d) { return 6*Math.sqrt(d[entry.key]) })
+        .attr("height", function(d) { return 6*Math.sqrt(d[entry.key]) })
+        .attr("fill", entry.colour);
+    });
+
+    // axis labelling
+    var annotationGroup = svg.append("g")
+      .attr("id", "annotation-group")
+    annotationGroup.append("text")
+      .attr("class", "small-label")
+      .text("←less AI related business")
+      .style("text-anchor", "start")
+      .attr("x", margin.left)
+      .attr("y", onDesktop ? margin.top + 10 : margin.top + 20)
+    annotationGroup.append("text")
+      .attr("class", "small-label")
+      .text("more AI related business→")
+      .style("text-anchor", "end")
+      .attr("x", width-margin.right- (onDesktop ? 20 : -20) )
+      .attr("y", parseInt(svg.style("width")) > 600 ? margin.top+10 : (onDesktop ? margin.top-5 : margin.top + 35))
+
+
+
+    // handle radio button select
+
+    d3.selectAll("input[name=ranker]").on("change", function() {
+      // remove outline from old squares
+      d3.selectAll("." + variable + "-rect")
+        .style("stroke", "white")
+        .style("stroke-width", "1px");
+
+      // set new variable from checkbox
+      variable = this.value;
+      // transition squares
+      d3.selectAll(".score-rect")
+        .transition()
+        .duration(800)
+        .ease(d3.easeCubicInOut)
+        .attr("x", function(d) { return xTotal(+d[variable]) })
+      d3.selectAll(".row")
+        .transition()
+        .delay(800)
+        .duration(1000)
+        .ease(d3.easeCubicInOut)
+        .attr("transform", function(d) {
+          return "translate(" + (onDesktop ? 0 : 10) + "," + (margin.top + (+d[variable+"Rank"])*rowHeight) + ")"
+        })
+      // update ranking numbers
+      d3.selectAll(".ranking")
+        .text(function(d) { return d[variable+"Rank"] })
+      // add a black outline to square
+      d3.selectAll("." + variable + "-rect")
+        .style("stroke", "black")
+        .style("stroke-width", "2px")
+        .raise();
+    }) // end on change
+
+  }
+
+
+
+</script>

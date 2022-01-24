@@ -1,0 +1,135 @@
+ScoreRank,Country,Deals,DealsRank,Filings,FilingsRank,Jobs,JobsRank,Patents,PatentsRank,Score,Region
+1,US,10,1,10,1,10,1,10,1,10,North America
+2,Singapore,1.34,11,3.06,5,1.2,11,1,19,6.722,Asia-Pacific
+3,Switzerland,1.25,13,1.5,24,1.17,12,1,20,6.714,Europe
+4,Netherlands,1.21,14,1.72,17,1.11,19,1.01,14,6.62,Europe
+5,Japan,1.64,7,4.23,3,1.13,15,1.8,4,6.422,Asia-Pacific
+6,South Korea,1.46,10,1.82,15,1.04,27,1.98,3,6.411,Asia-Pacific
+7,Sweden,1.21,15,1.56,23,1.12,17,1,21,6.405,Europe
+8,Finland,1.12,19,1.28,36,1.04,28,1,22,6.309,Europe
+9,Germany,1.62,8,2.89,6,1.53,5,1.08,8,6.282,Europe
+10,Ireland,1.16,17,1.3,35,1.45,6,1,23,6.277,Europe
+11,UK,2.5,3,2.75,8,1.76,3,1.08,9,6.205,Europe
+12,France,1.51,9,2.25,11,1.38,7,1.03,11,5.933,Europe
+13,Israel,1.68,6,1.43,30,1.14,14,1,24,5.758,Middle East
+14,Denmark,1.11,21,1.33,33,1.04,29,1.01,15,5.755,Europe
+15,Austria,1.07,25,1.31,34,1.03,33,1,25,5.567,Europe
+16,Canada,1.85,4,2.46,10,1.55,4,1.11,7,5.527,North America
+17,Malaysia,1.05,30,2.55,9,1.06,24,1,26,5.527,Asia-Pacific
+18,Czech Republic,1.03,38,1.21,44,1.04,30,1,27,5.332,Europe
+19,Australia,1.34,12,2.84,7,1.21,10,1.26,5,5.092,Asia-Pacific
+20,China,3.65,2,6.44,2,1.38,8,4.39,2,5.082,Asia-Pacific
+21,UAE,1.05,31,1.26,37,1.02,40,1,28,4.991,Middle East
+22,Luxembourg,1.02,42,1.18,45,1.03,34,1.01,16,4.936,Europe
+23,Iceland,1.02,43,1.02,104,1,63,1,29,4.908,Europe
+24,Slovenia,1.01,60,1.06,73,1.01,48,1,30,4.906,Europe
+25,Estonia,1.04,34,1.08,64,1,64,1,31,4.877,Europe
+26,Hungary,1.02,44,1.16,49,1.05,25,1,32,4.802,Europe
+27,Italy,1.12,20,1.79,16,1.33,9,1,33,4.774,Europe
+28,Portugal,1.06,26,1.22,42,1.04,31,1,34,4.769,Europe
+29,India,1.85,5,3.97,4,2.59,2,1,35,4.762,Asia-Pacific
+30,New Zealand,1.05,32,1.45,29,1.03,35,1,36,4.727,Europe
+31,Malta,1.01,61,1.04,85,1.01,49,1,37,4.727,Asia-Pacific
+32,Slovakia,1.02,45,1.11,57,1.02,41,1,38,4.698,Europe
+33,Spain,1.21,16,1.67,20,1.13,16,1.05,10,4.661,Europe
+34,Thailand,1.03,39,2.16,12,1.02,42,1,39,4.609,Asia-Pacific
+35,Belgium,1.09,23,1.38,31,1.07,20,1,40,4.483,Europe
+36,Philippines,1.02,46,1.57,22,1.07,21,1,41,4.46,Asia-Pacific
+37,Norway,1.13,18,1.36,32,1.03,36,1,42,4.421,Europe
+38,Poland,1.08,24,1.47,26,1.17,13,1.01,17,4.397,Europe
+39,Lithuania,1.02,47,1.04,86,1.03,37,1,43,4.395,Europe
+40,Mexico,1.04,35,1.68,19,1.07,22,1.02,12,4.384,Latin America and Caribbean
+41,Saudi Arabia,1.02,48,1.22,43,1.01,50,1,44,4.287,Middle East
+42,Brazil,1.11,22,1.97,14,1.07,23,1.02,13,4.281,Latin America and Caribbean
+43,Romania,1.04,36,1.26,38,1.12,18,1,45,4.26,Europe
+44,Bulgaria,1.01,62,1.17,47,1.02,43,1,46,4.195,Europe
+45,Hong Kong,1.06,27,1.47,27,1.05,26,1,47,4.105,Asia-Pacific
+46,Indonesia,1.05,33,2.12,13,1.02,44,1,48,4.102,Asia-Pacific
+47,Vietnam,1.02,49,1.67,21,1.02,45,1,49,4.102,Asia-Pacific
+48,Cyprus,1.02,50,1.05,79,1,65,1,50,4.055,Europe
+49,Qatar,1.01,63,1.13,54,1,66,1,51,4.048,Middle East
+50,Turkey,1.04,37,1.47,28,1.01,51,1,52,4.04,Europe
+51,Latvia,1.02,51,1.05,80,1,67,1,53,3.957,Europe
+52,Croatia,1.01,64,1.07,70,1.01,52,1,54,3.956,Europe
+53,Argentina,1.02,52,1.24,39,1.03,38,1,55,3.922,Latin America and Caribbean
+54,Ukraine,1.02,53,1.09,59,1.03,39,1,56,3.904,Europe
+55,Russia,1.06,28,1.72,18,1.02,46,1.14,6,3.899,Europe
+56,Serbia,1.01,65,1.06,74,1,68,1,57,3.856,Europe
+57,Chile,1.03,40,1.24,40,1.01,53,1,58,3.842,Latin America and Caribbean
+58,South Africa,1.06,29,1.48,25,1.04,32,1.01,18,3.839,Africa
+59,Costa Rica,1.01,66,1.05,81,1.02,47,1,59,3.773,Latin America and Caribbean
+60,Greece,1.02,54,1.15,50,1.01,54,1,60,3.763,Europe
+61,Morocco,1.01,67,1.08,65,1,69,1,61,3.74,Africa
+62,Oman,1.01,68,1.09,60,1,70,1,62,3.731,Middle East
+63,Kenya,1.02,55,1.12,56,1.01,55,1,63,3.718,Africa
+64,North Macedonia,1,133,1.01,114,1,71,1,64,3.716,Europe
+65,Azerbaijan,1.01,69,1.01,115,1,72,1,65,3.609,Asia-Pacific
+66,Kuwait,1.01,70,1.14,52,1,73,1,66,3.606,Middle East
+67,Colombia,1.02,56,1.24,41,1.01,56,1,67,3.587,Latin America and Caribbean
+68,Iran,1.01,71,1.04,87,1,74,1,68,3.572,Middle East
+69,Egypt,1.02,57,1.18,46,1.01,57,1,69,3.542,Africa
+70,Tunisia,1.01,72,1.02,105,1,75,1,70,3.534,Africa
+71,Jordan,1.01,73,1.01,116,1,76,1,71,3.517,Middle East
+72,Uruguay,1.01,74,1.04,88,1,77,1,72,3.445,Latin America and Caribbean
+73,Montenegro,1.01,75,1.01,117,1,78,1,73,3.424,Europe
+74,Moldova,1.01,76,1.02,106,1,79,1,74,3.4,Europe
+75,Senegal,1.01,77,1.04,89,1,80,1,75,3.338,Africa
+76,Armenia,1.01,78,1.01,118,1,81,1,76,3.336,Asia-Pacific
+77,Bahrain,1.01,79,1.09,61,1,82,1,77,3.32,Middle East
+78,Panama,1.01,80,1.06,75,1,83,1,78,3.277,Latin America and Caribbean
+79,Sri Lanka,1.01,81,1.09,62,1.01,58,1,79,3.266,Asia-Pacific
+80,Ecuador,1.01,82,1.05,82,1,84,1,80,3.244,Latin America and Caribbean
+81,Kazakhstan,1.01,83,1.07,71,1,85,1,81,3.203,Asia-Pacific
+82,Peru,1.01,84,1.15,51,1.01,59,1,82,3.186,Latin America and Caribbean
+83,Tanzania,1.01,85,1.07,72,1,86,1,83,3.152,Africa
+84,Mauritius,1.01,86,1.08,66,1,87,1,84,3.127,Africa
+85,Ghana,1.01,87,1.08,67,1,88,1,85,3.098,Africa
+86,Bosnia and Herzegovina,1.01,88,1.01,119,1,89,1,86,3.088,Europe
+87,Rwanda,1.01,89,1.02,107,1,90,1,87,3.036,Africa
+88,Dominican Republic,1.01,90,1.02,108,1,91,1,88,2.883,Latin America and Caribbean
+89,Albania,1.01,91,1.02,109,1.01,60,1,89,2.801,Europe
+90,Georgia,1.01,92,1,133,1,92,1,90,2.765,Asia-Pacific
+91,Cape Verde,1.01,93,1.01,120,1,93,1,91,2.765,Africa
+92,Bangladesh,1.01,94,1.14,53,1,94,1,92,2.755,Asia-Pacific
+93,Uganda,1.01,95,1.04,90,1,95,1,93,2.745,Africa
+94,Paraguay,1.01,96,1.01,121,1,96,1,94,2.687,Latin America and Caribbean
+95,Jamaica,1.01,97,1.04,91,1,97,1,95,2.684,Latin America and Caribbean
+96,Zimbabwe,1.01,98,1.04,92,1,98,1,96,2.683,Africa
+97,Algeria,1.01,99,1.04,93,1,99,1,97,2.679,Africa
+98,Mongolia,1.01,100,1.04,94,1,100,1,98,2.677,Asia-Pacific
+99,El Salvador,1.01,101,1.01,122,1,101,1,99,2.648,Latin America and Caribbean
+100,Trinidad and Tobago,1.01,102,1.01,123,1,102,1,100,2.622,Latin America and Caribbean
+101,Botswana,1.01,103,1.06,76,1,103,1,101,2.614,Africa
+102,Cambodia,1.01,104,1.17,48,1,104,1,102,2.551,Asia-Pacific
+103,Namibia,1.01,105,1.09,63,1,105,1,103,2.546,Africa
+104,Kyrgyzstan,1.01,106,1,134,1,106,1,104,2.543,Asia-Pacific
+105,Guatemala,1.01,107,1.03,96,1,107,1,105,2.511,Latin America and Caribbean
+106,Nepal,1.01,108,1.05,83,1,108,1,106,2.474,Asia-Pacific
+107,Mali,1.01,109,1.06,77,1,109,1,107,2.468,Africa
+108,Malawi,1.01,110,1.02,110,1,110,1,108,2.467,Africa
+109,Nigeria,1.03,41,1.13,55,1,111,1,109,2.416,Africa
+110,Burkina Faso,1.01,111,1.03,97,1,112,1,110,2.411,Africa
+111,Ivory Coast,1,134,1.01,124,1,113,1,111,2.399,Africa
+112,Zambia,1.01,112,1.05,84,1,114,1,112,2.386,Africa
+113,Cameroon,1.01,113,1.03,98,1,115,1,113,2.373,Africa
+114,Guinea,1.01,114,1.03,99,1,116,1,114,2.351,Africa
+115,Madagascar,1.01,115,1.03,100,1,117,1,115,2.35,Africa
+116,Pakistan,1.02,58,1.11,58,1.01,61,1,116,2.347,Asia-Pacific
+117,Bolivia,1.01,116,1.01,125,1,118,1,117,2.329,Latin America and Caribbean
+118,Laos,1.01,117,1.08,68,1,119,1,118,2.318,Asia-Pacific
+119,Belarus,1.02,59,1.03,101,1.01,62,1,119,2.285,Europe
+120,Ethiopia,1.01,118,1.02,111,1,120,1,120,2.282,Africa
+121,Benin,1.01,119,1.02,112,1,121,1,121,2.275,Africa
+122,Mozambique,1.01,120,1.06,78,1,122,1,122,2.235,Africa
+123,Honduras,1.01,121,1.01,126,1,123,1,123,2.232,Latin America and Caribbean
+124,Lebanon,1.01,122,1.08,69,1,124,1,124,2.107,Middle East
+125,Angola,1.01,123,1.03,102,1,125,1,125,2.103,Africa
+126,Tajikistan,1.01,124,1.01,127,1,126,1,126,2.024,Asia-Pacific
+127,Gambia,1.01,125,1.01,128,1,127,1,127,1.986,Africa
+128,Venezuela,1.01,126,1.03,103,1,128,1,128,1.749,Latin America and Caribbean
+129,DR Congo,1.01,127,1.01,129,1,129,1,129,1.64,Africa
+130,Burundi,1.01,128,1.01,130,1,130,1,130,1.609,Africa
+131,Lesotho,1.01,129,1.04,95,1,131,1,131,1.548,Africa
+132,Eswatini,1.01,130,1.01,131,1,132,1,132,1.511,Africa
+133,Yemen,1.01,131,1.01,132,1,133,1,133,1.471,Middle East
+134,Chad,1.01,132,1.02,113,1,134,1,134,1.319,Africa
