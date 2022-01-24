@@ -1,1 +1,1 @@
-giacomobg.github.io/ai-business-index
+[View the project](giacomobg.github.io/ai-business-index)
